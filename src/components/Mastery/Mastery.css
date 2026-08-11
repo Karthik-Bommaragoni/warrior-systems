@@ -1,0 +1,555 @@
+/* =========================================================
+   MASTERY
+========================================================= */
+
+.mastery-section {
+    width: 100%;
+    min-height: calc(100vh - 92px);
+
+    background: #f7f5ef;
+    color: #203044;
+
+    overflow: hidden;
+}
+
+.mastery-inner {
+    width: min(1280px, calc(100% - 64px));
+
+    min-height: calc(100vh - 92px);
+
+    margin: 0 auto;
+
+    padding: 42px 0 35px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.mastery-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.mastery-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    color: #b98b2b;
+}
+
+.mastery-eyebrow span {
+    width: 32px;
+    height: 1px;
+
+    background: #c8a04a;
+}
+
+.mastery-header h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 3.3vw, 48px);
+
+    line-height: 1.04;
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+
+    color: #263548;
+}
+
+.mastery-header h2 em {
+    color: #397267;
+    font-style: normal;
+}
+
+.mastery-header p {
+    margin: 10px auto 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 12.5px;
+
+    color: #78858b;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.mastery-map {
+    position: relative;
+
+    width: 100%;
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-template-rows:
+        92px 92px 125px;
+
+    column-gap: 16px;
+    row-gap: 16px;
+
+    padding-bottom: 70px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.mastery-card,
+.mastery-leadership {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 18px 22px;
+
+    box-sizing: border-box;
+
+    background: #f1efe8;
+
+    border: 1px solid rgba(38, 53, 72, 0.12);
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.mastery-card:hover,
+.mastery-leadership:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(185, 139, 43, 0.42);
+
+    background: #f8f6f0;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.mastery-card-icon {
+    flex: 0 0 40px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #e8e9e3;
+
+    color: #397267;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.mastery-card-letter {
+    display: none;
+}
+
+.mastery-card h3,
+.mastery-leadership h3 {
+    margin: 0 0 5px;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    color: #263548;
+}
+
+.mastery-card p,
+.mastery-leadership p {
+    margin: 0;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 9px;
+
+    letter-spacing: 0.03em;
+
+    color: #718087;
+}
+
+
+/* =========================================================
+   LEADERSHIP
+========================================================= */
+
+.mastery-leadership {
+    grid-column: 2;
+    grid-row: 3;
+
+    width: 100%;
+
+    align-self: start;
+
+    margin-top: 0;
+
+    z-index: 3;
+}
+
+.mastery-letter {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #e5edf0;
+
+    color: #397267;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   CENTRAL MASTERY CORE
+========================================================= */
+
+.mastery-core {
+    position: absolute;
+
+    left: 50%;
+
+    top: 274px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    width: 142px;
+    height: 142px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 50% 30%,
+            #243c5d,
+            #101f39 72%);
+
+    border: 1px solid #b98b2b;
+
+    box-shadow:
+        0 0 0 9px #f7f5ef,
+        0 0 0 10px rgba(185, 139, 43, 0.20);
+
+    color: #f7f5ef;
+}
+
+.mastery-core-title {
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+
+    color: #d5a52e;
+}
+
+.mastery-core-title sup {
+    font-size: 7px;
+
+    vertical-align: top;
+
+    margin-left: 2px;
+}
+
+.mastery-core span {
+    margin-top: 7px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 7px;
+
+    letter-spacing: 0.14em;
+
+    color: #9da9b8;
+}
+
+
+/* =========================================================
+   CONNECTING LINES
+========================================================= */
+
+.mastery-map::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 1;
+
+    left: 16%;
+    right: 16%;
+
+    top: 102px;
+
+    height: 1px;
+
+    background: rgba(185, 139, 43, 0.32);
+
+    box-shadow:
+        0 108px 0 rgba(185, 139, 43, 0.22);
+}
+
+.mastery-map::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 1;
+
+    left: 50%;
+
+    top: 102px;
+
+    width: 1px;
+
+    height: 200px;
+
+    background: rgba(185, 139, 43, 0.22);
+}
+
+
+/* =========================================================
+   GOAL
+========================================================= */
+
+.mastery-goal {
+    position: absolute;
+
+    left: 50%;
+    bottom: -15px;
+
+    transform: translateX(-50%);
+
+    z-index: 6;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    white-space: nowrap;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    color: #b98b2b;
+}
+
+.mastery-goal span {
+    width: 34px;
+    height: 1px;
+
+    background: rgba(185, 139, 43, 0.45);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .mastery-inner {
+        width: min(1320px, calc(100% - 90px));
+    }
+
+    .mastery-card,
+    .mastery-leadership {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .mastery-section {
+        min-height: auto;
+    }
+
+    .mastery-inner {
+        min-height: auto;
+
+        padding: 60px 0;
+    }
+
+    .mastery-map {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows:
+            repeat(4, 90px);
+
+        height: auto;
+
+        padding-bottom: 130px;
+    }
+
+    .mastery-leadership {
+        grid-column: 1 / 3;
+        grid-row: 4;
+
+        width: 50%;
+        justify-self: center;
+    }
+
+    .mastery-core {
+        top: auto;
+        bottom: 35px;
+    }
+
+    .mastery-map::before,
+    .mastery-map::after {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+    .mastery-inner {
+        width: calc(100% - 32px);
+
+        padding: 55px 0;
+    }
+
+    .mastery-header h2 {
+        font-size: 34px;
+    }
+
+    .mastery-map {
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            repeat(7, 78px);
+
+        gap: 10px;
+
+        padding-bottom: 145px;
+    }
+
+    .mastery-leadership {
+        grid-column: 1;
+        grid-row: 7;
+
+        width: 100%;
+    }
+
+    .mastery-core {
+        bottom: 35px;
+    }
+
+    .mastery-card h3,
+    .mastery-leadership h3 {
+        font-size: 13px;
+    }
+}

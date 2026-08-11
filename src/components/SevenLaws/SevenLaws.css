@@ -1,0 +1,617 @@
+/* =========================================================
+   7 LAWS OF EXECUTION
+========================================================= */
+
+.seven-laws-section {
+    width: 100%;
+    min-height: calc(100vh - 92px);
+
+    box-sizing: border-box;
+
+    background: #f7f5ef;
+    color: #182334;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.seven-laws-container {
+    width: min(1240px, calc(100% - 64px));
+
+    min-height: calc(100vh - 92px);
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    padding-top:20px;
+    padding-bottom:35px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.seven-laws-header {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.seven-laws-eyebrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    color: #b98b2b;
+
+    text-transform: uppercase;
+}
+
+.seven-laws-eyebrow-line {
+    width: 30px;
+    height: 1px;
+
+    background: #c8a04a;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.seven-laws-header h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 3.3vw, 48px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+
+    color: #263445;
+}
+
+.seven-laws-header h2 span {
+    color: #b98b2b;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.seven-laws-header p {
+    margin: 12px auto 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #7a838a;
+}
+
+
+/* =========================================================
+   NAVY FRAMEWORK
+========================================================= */
+
+.laws-framework {
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 44px 38px 27px;
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.025),
+            rgba(255, 255, 255, 0.025)),
+        #0b1933;
+
+    border: 1px solid rgba(198, 155, 47, 0.38);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 18px 45px rgba(18, 31, 52, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SUBTLE GRID INSIDE FRAME
+========================================================= */
+
+.laws-framework::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.055;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.42) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.42) 1px,
+            transparent 1px);
+
+    background-size: 54px 54px;
+}
+
+
+/* =========================================================
+   FRAMEWORK LABEL
+========================================================= */
+
+.framework-label {
+    position: absolute;
+
+    top: 17px;
+    left: 24px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+
+    color: #c59a32;
+}
+
+
+/* =========================================================
+   CONNECTOR
+========================================================= */
+
+.laws-connector {
+    position: absolute;
+
+    top: 71px;
+
+    left: 7.14%;
+    right: 7.14%;
+
+    height: 1px;
+
+    background: #c79a2c;
+
+    opacity: 0.75;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.laws-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   LAW
+========================================================= */
+
+.law-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.law-icon {
+    position: relative;
+
+    z-index: 3;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    background: #f7f5ef;
+
+    border: 1px solid rgba(201, 160, 74, 0.48);
+
+    color: #b98b2b;
+
+    box-shadow:
+        0 0 0 6px #152746;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.law-card:hover .law-icon {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   STEM
+========================================================= */
+
+.law-stem {
+    width: 1px;
+    height: 22px;
+
+    background: rgba(210, 215, 219, 0.35);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.law-number {
+    margin-bottom: 7px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    color: #d1a33b;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.law-card h3 {
+    margin: 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 0.01em;
+
+    color: #f4f1e9;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.law-card p {
+    width: min(145px, 100%);
+
+    margin: 12px auto 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    color: #b5c0d0;
+}
+
+/* =========================================================
+   SECTION TRANSITION
+========================================================= */
+
+.laws-section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+.laws-section-divider span {
+    width: 52px;
+    height: 1px;
+
+    background: rgba(185, 139, 43, 0.42);
+}
+
+.laws-divider-mark {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #b98b2b;
+}
+
+
+/* =========================================================
+   FRAMEWORK FOOTER
+========================================================= */
+
+.framework-footer {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 29px;
+}
+
+.framework-footer span {
+    width: 42px;
+    height: 1px;
+
+    background: rgba(201, 160, 74, 0.35);
+}
+
+.framework-footer p {
+    margin: 0;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 8px;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: #8190a5;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .seven-laws-container {
+        width: min(1280px, calc(100% - 100px));
+
+        padding: 58px 0;
+    }
+
+    .seven-laws-header {
+        margin-bottom: 40px;
+    }
+
+    .laws-framework {
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .law-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .law-card h3 {
+        font-size: 14px;
+    }
+
+    .law-card p {
+        width: 150px;
+
+        font-size: 11.5px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .seven-laws-container {
+        width: calc(100% - 48px);
+    }
+
+    .laws-framework {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .law-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .law-card h3 {
+        font-size: 11px;
+    }
+
+    .law-card p {
+        width: 115px;
+
+        font-size: 9.5px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .seven-laws-section {
+        min-height: 0;
+    }
+
+    .seven-laws-container {
+        width: calc(100% - 40px);
+
+        min-height: 0;
+
+        padding: 70px 0;
+    }
+
+    .seven-laws-header {
+        margin-bottom: 32px;
+    }
+
+    .laws-framework {
+        padding: 42px 24px 26px;
+
+        overflow-x: auto;
+    }
+
+    .laws-grid {
+        min-width: 760px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .seven-laws-container {
+        width: calc(100% - 32px);
+
+        padding: 58px 0;
+    }
+
+    .seven-laws-header h2 {
+        font-size: 34px;
+    }
+
+    .seven-laws-header p {
+        max-width: 280px;
+
+        font-size: 12px;
+    }
+
+    .laws-framework {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .laws-grid {
+        min-width: 720px;
+    }
+
+}

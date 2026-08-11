@@ -1,0 +1,537 @@
+/* =========================================================
+   WARRIOR SYSTEMS
+========================================================= */
+
+.warrior-systems {
+    width: 100%;
+    min-height: calc(100vh - 92px);
+    box-sizing: border-box;
+
+    background: #eef2ef;
+    color: #203044;
+
+    overflow: hidden;
+}
+
+.warrior-systems-inner {
+    width: min(1240px, calc(100% - 64px));
+    min-height: calc(100vh - 92px);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 30px 0 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.warrior-copy {
+    max-width: 420px;
+
+    transform: translateY(-18px);
+}
+
+.warrior-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin-bottom: 18px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    color: #42766e;
+}
+
+.warrior-eyebrow span {
+    width: 34px;
+    height: 1px;
+
+    background: #8eaaa4;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.warrior-copy h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(36px, 3.25vw, 47px);
+
+    line-height: 1.04;
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+
+    color: #243449;
+}
+
+.warrior-copy h2 em {
+    color: #397267;
+    font-style: normal;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.warrior-copy>p {
+    max-width: 380px;
+
+    margin: 22px 0 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 12.5px;
+
+    line-height: 1.6;
+
+    color: #718187;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.warrior-button {
+    margin-top: 23px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #9eb5b0;
+    border-radius: 3px;
+
+    background: transparent;
+
+    color: #315e58;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10.5px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.warrior-button span {
+    font-size: 15px;
+
+    transition: transform 0.2s ease;
+}
+
+.warrior-button:hover {
+    background: #ffffff;
+
+    border-color: #71958f;
+
+    transform: translateY(-2px);
+}
+
+.warrior-button:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   SYSTEM MAP
+========================================================= */
+
+.system-map {
+    position: relative;
+
+    width: 100%;
+
+    height: 430px;
+
+    transform: translateY(-10px);
+}
+
+
+/* =========================================================
+   CENTER CORE
+========================================================= */
+
+.system-core {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 118px;
+    height: 118px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #367269;
+
+    color: #f7f5ef;
+
+    box-shadow:
+        0 0 0 9px rgba(54, 114, 105, 0.08);
+
+    z-index: 4;
+}
+
+.core-mark {
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 37px;
+
+    line-height: 0.8;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.system-core strong {
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+}
+
+.system-core small {
+    margin-top: 3px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 6.5px;
+
+    letter-spacing: 0.16em;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   CONNECTOR SYSTEM
+========================================================= */
+
+.system-lines {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+}
+
+.system-lines::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 250px;
+    height: 250px;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(71, 116, 108, 0.20);
+
+    border-radius: 50%;
+}
+
+.system-lines::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 400px;
+    height: 1px;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(71, 116, 108, 0.16);
+
+    box-shadow:
+        0 -125px 0 rgba(71, 116, 108, 0.16),
+        0 125px 0 rgba(71, 116, 108, 0.16);
+}
+
+
+/* =========================================================
+   DEPARTMENT CARD
+========================================================= */
+
+.department {
+    position: absolute;
+
+    width: 145px;
+    min-height: 61px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 11px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.42);
+
+    border: 1px solid rgba(116, 145, 140, 0.22);
+
+    border-radius: 8px;
+
+    z-index: 3;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.department:hover {
+    background: rgba(255, 255, 255, 0.78);
+
+    border-color: rgba(63, 116, 106, 0.38);
+}
+
+
+/* =========================================================
+   DEPARTMENT POSITIONS
+========================================================= */
+
+.department.sales {
+    top: 4px;
+    left: 8%;
+}
+
+.department.marketing {
+    top: 50%;
+    left: 8%;
+
+    transform: translateY(-50%);
+}
+
+.department.people {
+    bottom: 4px;
+    left: 8%;
+}
+
+.department.operations {
+    top: 4px;
+    right: 8%;
+}
+
+.department.finance {
+    top: 50%;
+    right: 8%;
+
+    transform: translateY(-50%);
+}
+
+.department.technology {
+    bottom: 4px;
+    right: 8%;
+}
+
+
+/* =========================================================
+   DEPARTMENT ICON
+========================================================= */
+
+.department-icon {
+    flex: 0 0 29px;
+
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    color: #397267;
+
+    background: rgba(63, 116, 106, 0.07);
+}
+
+
+/* =========================================================
+   DEPARTMENT TEXT
+========================================================= */
+
+.department h3 {
+    margin: 0 0 3px;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 9.5px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    color: #314451;
+}
+
+.department p {
+    margin: 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 7.5px;
+
+    line-height: 1.4;
+
+    color: #7c898d;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .warrior-systems-inner {
+        width: min(1280px, calc(100% - 100px));
+
+        grid-template-columns: 0.8fr 1.2fr;
+
+        gap: 35px;
+
+        padding-top: 25px;
+    }
+
+    .system-map {
+        height: 420px;
+    }
+
+    .department {
+        width: 150px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .warrior-systems-inner {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 60px 0;
+    }
+
+    .warrior-copy {
+        max-width: 600px;
+
+        transform: none;
+    }
+
+    .system-map {
+        height: 440px;
+
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .warrior-systems-inner {
+        width: calc(100% - 32px);
+
+        padding: 55px 0;
+    }
+
+    .warrior-copy h2 {
+        font-size: 36px;
+    }
+
+    .system-map {
+        height: 600px;
+
+        transform: scale(0.82);
+
+        transform-origin: top center;
+
+        margin-bottom: -90px;
+    }
+}

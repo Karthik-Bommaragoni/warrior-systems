@@ -1,0 +1,308 @@
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding: 80px 0;
+
+    background: #07152f;
+
+    color: #f5f1e8;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.final-cta-grid {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.55;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px);
+
+    background-size: 64px 64px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.final-cta-container {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(900px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.final-cta-eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    color: #d9a91e;
+}
+
+.final-cta-eyebrow span {
+    width: 32px;
+
+    height: 1px;
+
+    background: #d9a91e;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.final-cta-heading {
+    margin: 0;
+
+    font-family: var(--display);
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 0.91;
+
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+
+    color: #f5f1e8;
+}
+
+.final-cta-heading span {
+    color: #d9a91e;
+}
+
+
+/* =========================================================
+   SUBHEADING
+========================================================= */
+
+.final-cta-subheading {
+    margin: 18px 0 0;
+
+    font-family: var(--display);
+
+    font-size: clamp(27px, 3.5vw, 42px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.015em;
+
+    text-transform: uppercase;
+
+    color: #f5f1e8;
+}
+
+.final-cta-subheading span {
+    color: #d9a91e;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.final-cta-description {
+    max-width: 570px;
+
+    margin: 20px auto 0;
+
+    font-family: var(--body);
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    color: #8fa0b8;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.final-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 17px;
+
+    margin-top: 27px;
+
+    padding: 15px 22px;
+
+    border: 1px solid #d9a91e;
+
+    border-radius: 3px;
+
+    background: #d9a91e;
+
+    color: #07152f;
+
+    text-decoration: none;
+
+    font-family: var(--mono);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.final-cta-button:hover {
+    transform: translateY(-3px);
+
+    background: #e3b42e;
+
+    box-shadow:
+        0 12px 30px rgba(217, 169, 30, 0.18);
+}
+
+.final-cta-arrow {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.final-cta-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 28px;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    letter-spacing: 0.02em;
+
+    color: #71839d;
+}
+
+.final-cta-footer span {
+    color: #d9a91e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .final-cta-section {
+        min-height: 480px;
+
+        padding: 65px 0;
+    }
+
+    .final-cta-container {
+        width: calc(100% - 32px);
+    }
+
+    .final-cta-heading {
+        font-size: clamp(40px, 10vw, 58px);
+    }
+
+    .final-cta-subheading {
+        font-size: 28px;
+    }
+
+    .final-cta-description {
+        font-size: 12px;
+    }
+
+    .final-cta-footer {
+        flex-wrap: wrap;
+
+        gap: 6px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .final-cta-button {
+        width: 100%;
+
+        padding: 14px 16px;
+
+        font-size: 10px;
+    }
+
+}

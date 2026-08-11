@@ -1,0 +1,599 @@
+/* =========================================================
+   ONE CONNECTED BUSINESS
+========================================================= */
+
+.connected-business-section {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 90px 0 95px;
+
+    background: #0b1935;
+
+    color: #f5f1e8;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.connected-business-grid {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.45;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px);
+
+    background-size: 72px 72px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.connected-business-container {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.connected-business-header {
+    max-width: 850px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.connected-eyebrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    color: #d8a622;
+}
+
+
+.connected-eyebrow span {
+    width: 32px;
+
+    height: 1px;
+
+    background: #d8a622;
+}
+
+
+.connected-business-header h2 {
+    margin: 0;
+
+    font-family: "Arial Black", "Montserrat", sans-serif;
+
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+
+    text-transform: uppercase;
+}
+
+
+.connected-business-header h2 span {
+    color: #d8a622;
+}
+
+
+.connected-business-header p {
+    max-width: 680px;
+
+    margin: 20px auto 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #91a3bf;
+}
+
+
+/* =========================================================
+   BUSINESS FLOW
+========================================================= */
+
+.business-flow {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 35px 1fr 35px 1fr 35px 1fr 35px 1fr;
+
+    align-items: center;
+
+    gap: 0;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CONNECTING LINE
+========================================================= */
+
+.flow-line {
+    position: absolute;
+
+    left: 5%;
+
+    right: 5%;
+
+    top: 50%;
+
+    height: 1px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            #d8a622 10%,
+            #d8a622 90%,
+            transparent);
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   FLOW CARDS
+========================================================= */
+
+.flow-card {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 205px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+    background: #132542;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.flow-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(216, 166, 34, 0.55);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.flow-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.flow-letter {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.flow-index {
+    font-family: "Space Mono", monospace;
+
+    font-size: 8px;
+
+    color: #71839e;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   CARD COLORS
+========================================================= */
+
+.flow-green .flow-letter {
+    background: rgba(48, 218, 137, 0.12);
+
+    color: #42e99a;
+}
+
+
+.flow-blue .flow-letter {
+    background: rgba(72, 137, 255, 0.14);
+
+    color: #5e9aff;
+}
+
+
+.flow-gold .flow-letter {
+    background: rgba(216, 166, 34, 0.14);
+
+    color: #d8a622;
+}
+
+
+.flow-purple .flow-letter {
+    background: rgba(155, 108, 255, 0.14);
+
+    color: #a77aff;
+}
+
+
+.flow-orange .flow-letter {
+    background: rgba(255, 99, 72, 0.14);
+
+    color: #ff7158;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.flow-department {
+    margin-bottom: 7px;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    color: #8394ae;
+}
+
+
+.flow-card h3 {
+    margin: 0;
+
+    font-family: "Arial Black", "Montserrat", sans-serif;
+
+    font-size: 21px;
+
+    line-height: 1.05;
+
+    color: #f7f3ea;
+}
+
+
+.flow-card p {
+    margin: 9px 0 0;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color: #8295b1;
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.flow-arrow {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 1px solid rgba(216, 166, 34, 0.4);
+
+    border-radius: 50%;
+
+    background: #0b1935;
+
+    color: #d8a622;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.business-result {
+    max-width: 720px;
+
+    margin: 55px auto 0;
+
+    text-align: center;
+}
+
+
+.result-line {
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(216, 166, 34, 0.5),
+            transparent);
+}
+
+
+.result-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.result-icon {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(216, 166, 34, 0.45);
+
+    border-radius: 50%;
+
+    background: rgba(216, 166, 34, 0.1);
+
+    color: #d8a622;
+
+    font-size: 18px;
+}
+
+
+.result-content>div:last-child {
+    text-align: left;
+}
+
+
+.result-content span {
+    font-family: "Space Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: #d8a622;
+}
+
+
+.result-content h3 {
+    margin: 3px 0;
+
+    font-family: "Arial Black", "Montserrat", sans-serif;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    color: #f7f3ea;
+}
+
+
+.result-content p {
+    margin: 4px 0 0;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 9px;
+
+    color: #8193af;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .business-flow {
+        grid-template-columns: 1fr 30px 1fr 30px 1fr;
+
+        row-gap: 18px;
+    }
+
+    .flow-card:nth-of-type(1) {
+        grid-column: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .connected-business-section {
+        padding: 70px 0 75px;
+    }
+
+    .connected-business-container {
+        width: min(100% - 32px, 600px);
+    }
+
+    .connected-business-header {
+        margin-bottom: 35px;
+    }
+
+    .connected-business-header h2 {
+        font-size: 38px;
+    }
+
+    .connected-business-header p {
+        font-size: 14px;
+    }
+
+    .business-flow {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .flow-line {
+        top: 0;
+        bottom: 0;
+
+        left: 50%;
+
+        right: auto;
+
+        width: 1px;
+
+        height: auto;
+
+        background: linear-gradient(180deg,
+                transparent,
+                #d8a622 10%,
+                #d8a622 90%,
+                transparent);
+    }
+
+    .flow-card {
+        width: 100%;
+
+        min-height: 150px;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .business-result {
+        margin-top: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .connected-business-header h2 {
+        font-size: 32px;
+    }
+
+    .flow-card {
+        min-height: 140px;
+
+        padding: 17px;
+    }
+
+    .flow-card h3 {
+        font-size: 19px;
+    }
+
+    .result-content {
+        align-items: flex-start;
+    }
+
+    .result-content h3 {
+        font-size: 23px;
+    }
+
+}

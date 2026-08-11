@@ -1,0 +1,517 @@
+/* =========================================================
+   PROBLEM SECTION
+========================================================= */
+
+.problem-section {
+    position: relative;
+
+    width: 100%;
+    height: calc(100vh - 92px);
+    min-height: 700px;
+
+    box-sizing: border-box;
+
+    background: #f7f5ef;
+    color: #182334;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.problem-container {
+    width: min(1180px, calc(100% - 64px));
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.88fr 1.12fr;
+
+    align-items: start;
+
+    column-gap: 64px;
+
+    box-sizing: border-box;
+
+    padding-top: 52px;
+    padding-bottom: 40px;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.problem-copy {
+    max-width: 455px;
+    align-self:start;
+    margin-top:0;
+    transform:translateY(-50px);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.problem-eyebrow {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    color: #bd8e24;
+
+    text-transform: uppercase;
+}
+
+.problem-eyebrow-line {
+    width: 36px;
+    height: 1px;
+
+    background: #c9a044;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.problem-heading {
+    margin: 0;
+
+    max-width: 450px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 3.15vw, 48px);
+
+    line-height: 1.04;
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+
+    color: #263445;
+}
+
+.problem-heading span {
+    display: block;
+
+    color: #b98b2b;
+}
+
+
+/* =========================================================
+   BODY COPY
+========================================================= */
+
+.problem-text {
+    max-width: 430px;
+
+    margin: 20px 0 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 13.5px;
+
+    line-height: 1.58;
+
+    color: #737b82;
+}
+
+
+/* =========================================================
+   CONCLUSION
+========================================================= */
+
+.problem-conclusion {
+    max-width: 430px;
+
+    margin: 19px 0 0;
+
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(24, 35, 52, 0.12);
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.45;
+
+    color: #5f6870;
+}
+
+.problem-conclusion strong {
+    color: #263445;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TRANSITION COPY
+========================================================= */
+
+.problem-transition {
+    max-width: 430px;
+
+    margin: 17px 0 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 12.5px;
+
+    line-height: 1.55;
+
+    color: #858c91;
+}
+
+
+/* =========================================================
+   SYSTEM STATEMENT
+========================================================= */
+
+.problem-system {
+    max-width: 430px;
+
+    margin: 14px 0 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: #b98b2b;
+}
+
+.problem-system strong {
+    font-weight: 700;
+}
+
+
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.problem-list {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border-top: 1px solid rgba(24, 35, 52, 0.12);
+    border-left: 1px solid rgba(24, 35, 52, 0.12);
+}
+
+
+/* =========================================================
+   PROBLEM ITEM
+========================================================= */
+
+.problem-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 16px;
+
+    min-height: 160px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border-right: 1px solid rgba(24, 35, 52, 0.12);
+    border-bottom: 1px solid rgba(24, 35, 52, 0.12);
+
+    background: transparent;
+
+    transition:
+        background 0.2s ease;
+}
+
+.problem-item:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.problem-item-icon {
+    flex: 0 0 40px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1px;
+
+    border-radius: 50%;
+
+    background: #eeece6;
+
+    color: #68737d;
+}
+
+
+/* =========================================================
+   ITEM CONTENT
+========================================================= */
+
+.problem-item-content {
+    min-width: 0;
+}
+
+
+/* Number */
+
+.problem-item-number {
+    margin-bottom: 6px;
+
+    font-family:
+        var(--mono,
+            "IBM Plex Mono",
+            monospace);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    color: #68737d;
+}
+
+
+/* Heading */
+
+.problem-item h3 {
+    max-width: 220px;
+
+    margin: 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.18;
+
+    font-weight: 700;
+
+    letter-spacing: -0.01em;
+
+    color: #263445;
+}
+
+
+/* Description */
+
+.problem-item p {
+    max-width: 225px;
+
+    margin: 11px 0 0;
+
+    font-family:
+        "Inter",
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #858c91;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .problem-container {
+        width: min(1240px, calc(100% - 100px));
+
+        column-gap: 80px;
+    }
+
+    .problem-heading {
+        font-size: 50px;
+    }
+
+    .problem-text {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .problem-container {
+        width: calc(100% - 56px);
+
+        grid-template-columns: 0.9fr 1.1fr;
+
+        column-gap: 42px;
+    }
+
+    .problem-heading {
+        font-size: 40px;
+    }
+
+    .problem-text {
+        font-size: 13px;
+    }
+
+    .problem-item {
+        padding: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .problem-section {
+        height: auto;
+
+        min-height: 0;
+    }
+
+    .problem-container {
+        width: calc(100% - 48px);
+
+        height: auto;
+
+        grid-template-columns: 1fr;
+
+        row-gap: 48px;
+
+        padding: 70px 0;
+    }
+
+    .problem-copy {
+        max-width: 650px;
+        transform:none;
+    }
+
+    .problem-heading {
+        max-width: 600px;
+
+        font-size: clamp(40px, 6vw, 52px);
+    }
+
+    .problem-text,
+    .problem-conclusion,
+    .problem-transition,
+    .problem-system {
+        max-width: 600px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .problem-container {
+        width: calc(100% - 40px);
+
+        padding: 60px 0;
+    }
+
+    .problem-heading {
+        font-size: 38px;
+
+        line-height: 1.03;
+    }
+
+    .problem-text {
+        font-size: 13.5px;
+
+        line-height: 1.6;
+    }
+
+    .problem-conclusion {
+        font-size: 14px;
+    }
+
+    .problem-transition {
+        font-size: 12.5px;
+    }
+
+    .problem-system {
+        font-size: 14px;
+    }
+
+    .problem-list {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-item {
+        min-height: 145px;
+
+        padding: 20px;
+    }
+
+}

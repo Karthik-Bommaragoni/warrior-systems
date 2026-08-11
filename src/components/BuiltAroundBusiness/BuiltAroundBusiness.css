@@ -1,0 +1,578 @@
+/* =========================================
+   BUILT AROUND YOUR BUSINESS
+========================================= */
+
+.built-section {
+    position: relative;
+    background: #f5f1e8;
+    color: #0b1b3a;
+    padding: 100px 0 95px;
+    overflow: hidden;
+}
+
+/* Grid background */
+
+.built-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(11, 27, 58, 0.045) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(11, 27, 58, 0.045) 1px,
+            transparent 1px);
+
+    background-size: 72px 72px;
+    pointer-events: none;
+}
+
+/* Soft center glow */
+
+.built-section::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(circle,
+            rgba(218, 166, 32, 0.07),
+            transparent 70%);
+
+    pointer-events: none;
+}
+
+.built-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.built-header {
+    max-width: 850px;
+    margin-bottom: 55px;
+}
+
+.built-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #b88b16;
+
+    margin-bottom: 20px;
+}
+
+.built-eyebrow span {
+    width: 30px;
+    height: 2px;
+    background: #d8a622;
+}
+
+.built-header h2 {
+    margin: 0;
+
+    font-family: "Arial Black", "Montserrat", sans-serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    font-weight: 900;
+}
+
+.built-header h2 span {
+    color: #d8a622;
+}
+
+.built-header p {
+    max-width: 760px;
+
+    margin: 25px 0 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+
+    color: #64738c;
+}
+
+.built-header strong {
+    color: #0b1b3a;
+}
+
+
+/* =========================================
+   BUILD GRID
+========================================= */
+
+.build-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.build-card {
+    position: relative;
+
+    min-height: 235px;
+
+    padding: 28px 30px;
+
+    background: #0c1d3c;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.build-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(216, 166, 34, 0.55);
+
+    box-shadow:
+        0 18px 40px rgba(8, 20, 45, 0.15);
+}
+
+
+/* subtle grid inside cards */
+
+.build-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px);
+
+    background-size: 40px 40px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.build-card-top {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.build-tag {
+    display: inline-flex;
+    align-items: center;
+
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: #d8a622;
+
+    padding: 6px 10px;
+
+    border: 1px solid rgba(216, 166, 34, 0.3);
+
+    border-radius: 4px;
+
+    background: rgba(216, 166, 34, 0.07);
+}
+
+.build-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: #aebbd0;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.build-card h3 {
+    position: relative;
+    z-index: 1;
+
+    margin: 24px 0 20px;
+
+    font-family: "Arial Black", "Montserrat", sans-serif;
+
+    font-size: 26px;
+    line-height: 1.1;
+
+    color: #f7f3ea;
+
+    letter-spacing: -0.025em;
+}
+
+.build-items {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.build-items span {
+    font-family: "Space Mono", monospace;
+
+    font-size: 11px;
+
+    color: #91a5c3;
+
+    padding: 7px 10px;
+
+    border: 1px solid rgba(145, 165, 195, 0.18);
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================================
+   CARD ACCENTS
+========================================= */
+
+.build-card-green {
+    border-top: 2px solid #35d98b;
+}
+
+.build-card-blue {
+    border-top: 2px solid #4e8cff;
+}
+
+.build-card-gold {
+    border-top: 2px solid #d8a622;
+}
+
+.build-card-purple {
+    border-top: 2px solid #9b6cff;
+}
+
+
+/* =========================================
+   LEADERSHIP CARD
+========================================= */
+
+.leadership-card {
+    grid-column: 1 / -1;
+
+    min-height: 215px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-color: rgba(216, 166, 34, 0.38);
+
+    background:
+        linear-gradient(110deg,
+            #0b1c3b 0%,
+            #10264c 60%,
+            #0c1d3c 100%);
+}
+
+.leadership-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+}
+
+.leadership-card h3 {
+    font-size: 30px;
+}
+
+
+/* =========================================
+   CONTROL TOWER VISUAL
+========================================= */
+
+.control-tower {
+    position: relative;
+
+    width: 170px;
+    height: 130px;
+
+    margin-right: 25px;
+}
+
+.tower-line {
+    position: absolute;
+
+    left: 50%;
+    top: 15px;
+    bottom: 15px;
+
+    width: 1px;
+
+    background: linear-gradient(to bottom,
+            transparent,
+            #d8a622,
+            transparent);
+}
+
+.tower-dot {
+    position: absolute;
+
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #d8a622;
+
+    box-shadow:
+        0 0 0 8px rgba(216, 166, 34, 0.08),
+        0 0 25px rgba(216, 166, 34, 0.25);
+}
+
+.tower-dot:first-child {
+    top: 10px;
+}
+
+.tower-dot:last-child {
+    bottom: 10px;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.built-bottom {
+    margin-top: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(11, 27, 58, 0.12);
+}
+
+.built-bottom>p {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+    line-height: 1.65;
+
+    color: #64738c;
+}
+
+
+/* =========================================
+   WARRIOR OS
+========================================= */
+
+.warrior-os {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    flex-shrink: 0;
+
+    padding: 15px 20px;
+
+    border: 1px solid rgba(216, 166, 34, 0.35);
+
+    border-radius: 8px;
+
+    background: #0c1d3c;
+
+    box-shadow: 0 10px 25px rgba(8, 20, 45, 0.12);
+}
+
+.os-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 6px;
+
+    background: #d8a622;
+
+    color: #0b1b3a;
+
+    font-family: "Arial Black", sans-serif;
+
+    font-size: 17px;
+}
+
+.warrior-os h4 {
+    margin: 0;
+
+    font-family: "Arial Black", "Montserrat", sans-serif;
+
+    font-size: 15px;
+
+    letter-spacing: 0.04em;
+
+    color: #f7f3ea;
+}
+
+.warrior-os h4 span {
+    color: #d8a622;
+}
+
+.warrior-os p {
+    margin: 3px 0 0;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 10px;
+
+    color: #91a5c3;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .built-section {
+        padding: 80px 0;
+    }
+
+    .built-header h2 {
+        font-size: clamp(40px, 7vw, 58px);
+    }
+
+    .leadership-card {
+        align-items: flex-start;
+    }
+
+    .control-tower {
+        display: none;
+    }
+
+    .built-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .built-section {
+        padding: 65px 0;
+    }
+
+    .built-container {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .built-header {
+        margin-bottom: 35px;
+    }
+
+    .built-header h2 {
+        font-size: 38px;
+        line-height: 1;
+    }
+
+    .built-header p {
+        font-size: 15px;
+    }
+
+    .build-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .build-card {
+        min-height: auto;
+        padding: 23px;
+    }
+
+    .leadership-card {
+        grid-column: auto;
+    }
+
+    .leadership-card h3 {
+        font-size: 25px;
+    }
+
+    .built-bottom {
+        margin-top: 35px;
+        gap: 25px;
+    }
+
+    .warrior-os {
+        width: 100%;
+    }
+}
