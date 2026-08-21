@@ -10,7 +10,7 @@ import BuildSystem from "../components/BuildSystem/BuildSystem";
 import Dashboard from "../components/Dashboard/Dashboard";
 import FounderTransformation from "../components/FounderTransformation/FounderTransformation";
 import ExecutionSystem from "../components/ExecutionSystem/ExecutionSystem";
-import AlternativeFailure from "../components/AlternativeFailure/AlternativeFailure";
+// import AlternativeFailure from "../components/AlternativeFailure/AlternativeFailure";
 import FinalCTA from "../components/FinalCTA/FinalCTA";
 import Footer from "../components/Footer";
 
@@ -31,7 +31,7 @@ function Home() {
         <Dashboard/>
         <FounderTransformation/>
         <ExecutionSystem/>
-        <AlternativeFailure/>
+        {/* <AlternativeFailure/> */}
         <FinalCTA/>
         <Footer/>
       </main>
